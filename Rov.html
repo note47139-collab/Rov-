@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รับสมัครแข่งขัน RoV - โรงเรียนบ้านท่าดินแดง</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      /* น้ำเงินเข้ม */
+      --secondary-color: #3b82f6;
+      /* น้ำเงินสว่าง */
+      --accent-color: #f59e0b;
+      /* ส้มทอง E-sports */
+      --bg-color: #f3f4f6;
+      --text-color: #1f2937;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* กล่องเนื้อหา */
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+
+    /* ส่วนหัว (Header) */
+    .header {
+      text-align: center;
+      border-bottom: 2px solid var(--bg-color);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      color: #6b7280;
+      font-size: 1.1rem;
+    }
+
+    /* หัวข้อต่างๆ */
+    h2 {
+      color: var(--secondary-color);
+      font-size: 1.4rem;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 10px;
+      margin-top: 25px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background-color: #fef3c7;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 500;
+      color: #b45309;
+    }
+
+    /* ฟอร์มรับสมัคร */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: var(--primary-color);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-family: 'Kanit', sans-serif;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .player-section {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .player-section h4 {
+      margin-top: 0;
+      color: var(--secondary-color);
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 5px;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Kanit', sans-serif;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 30px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(30, 58, 138, 0.2);
+    }
+
+    /* การจัดวาง Grid สำหรับฟอร์ม */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <h1>📢 เปิดรับสมัครทีมแข่งขัน RoV 🎮</h1>
+        <p>โรงเรียนบ้านท่าดินแดง เปิดรับสมัครทีมแข่งขันเพื่อคัดเลือกนักกีฬา E-Sports ตัวแทนโรงเรียน</p>
+      </div>
+
+      <h2>👨‍🎓 คุณสมบัติผู้สมัคร</h2>
+      <ul>
+        <li>เป็นนักเรียนโรงเรียนบ้านท่าดินแดง</li>
+        <li>กำลังศึกษาอยู่ในระดับชั้น ม.1 - ม.6</li>
+        <li>สมัครเป็นทีม ทีมละ 5 คน (มีตัวสำรองได้ 1 คน)</li>
+      </ul>
+
+      <h2>🏆 ข้อมูลการรับสมัคร</h2>
+      <ul>
+        <li>การแข่งขันจะใช้กติกามาตรฐานการแข่งขัน RoV</li>
+        <li><strong>เปิดรับสมัคร:</strong> ตั้งแต่วันนี้ 15 มิถุนายน พ.ศ2569</li>
+        <li><strong>ช่องทางการส่งรายชื่อ:</strong> ส่งรายชื่อสมาชิก พร้อมชื่อในเกม (IGN) และระดับชั้น ได้ที่ ........................</li>
+      </ul>
+
+      <div class="highlight-box">
+        🔥 รวมทีมให้พร้อม แล้วมาพิสูจน์ฝีมือเพื่อก้าวสู่การเป็นตัวแทนโรงเรียนบ้านท่าดินแดง! 🔥
+      </div>
+
+      <hr style="border: 0; height: 1px; background-color: #e5e7eb; margin: 30px 0;">
+
+      <h2>📜 กติกาการแข่งขัน RoV โรงเรียนบ้านท่าดินแดง</h2>
+
+      <h3>1. รูปแบบการแข่งขัน</h3>
+      <ul>
+        <li>แข่งขันแบบทีม 5 คน (มีตัวสำรองได้ 1 คน)</li>
+        <li>ใช้ระบบแพ้คัดออก (Single Elimination)</li>
+        <li>แข่งขันแบบ Best of 3 (BO3)</li>
+        <li>ทีมที่ชนะ 2 เกมก่อนเป็นผู้ชนะของแมตช์</li>
+      </ul>
+
+      <h3>2. กฎการเลือกฮีโร่</h3>
+      <ul>
+        <li>ใช้โหมด Tournament Mode</li>
+        <li>แบนฮีโร่ฝ่ายละ 4 ตัว ตามระบบเกม</li>
+        <li><strong>ห้ามใช้ฮีโร่ที่ชนะแล้วซ้ำภายในแมตช์เดียวกัน (Global Ban)</strong></li>
+        <li>หากทีมใดชนะด้วยฮีโร่ตัวใด จะไม่สามารถเลือกฮีโร่ตัวนั้นได้อีกในเกมถัดไปของแมตช์เดียวกัน</li>
+      </ul>
+
+      <h3>3. กฎผู้เล่น</h3>
+      <ul>
+        <li>ใช้บัญชีของตนเองเท่านั้น</li>
+        <li>ห้ามให้ผู้อื่นเล่นแทน (Substitute นอกเหนือจากที่แจ้งไว้)</li>
+        <li>ห้ามใช้โปรแกรมช่วยเล่น มาโคร สคริปต์ หรือโปรแกรมดัดแปลงเกมทุกชนิด</li>
+        <li>ห้ามใช้บั๊กหรือช่องโหว่ของเกมเพื่อเอาเปรียบคู่แข่ง</li>
+      </ul>
+
+      <h3>4. การเข้าร่วมแข่งขัน</h3>
+      <ul>
+        <li>ผู้เล่นทุกคนต้องพร้อมก่อนเวลาแข่งขันอย่างน้อย 15 นาที</li>
+        <li>หากทีมใดไม่พร้อมภายใน 15 นาทีหลังเวลานัด อาจถูกปรับแพ้ตามดุลยพินิจของกรรมการ</li>
+      </ul>
+
+      <h3>5. มารยาทในการแข่งขัน</h3>
+      <ul>
+        <li>ห้ามใช้คำหยาบคาย ดูหมิ่น เหยียด หรือสร้างความขัดแย้ง</li>
+        <li>ห้ามแสดงพฤติกรรมที่ไม่เหมาะสมต่อคู่แข่ง กรรมการ หรือผู้ชม</li>
+        <li>ต้องเคารพคำตัดสินของกรรมการ</li>
+      </ul>
+
+      <h3>6. การตัดสิน</h3>
+      <ul>
+        <li>ผลการแข่งขันยึดตามผลที่แสดงในเกม</li>
+        <li>หากเกิดปัญหาทางเทคนิค กรรมการจะเป็นผู้พิจารณาแนวทางแก้ไข</li>
+        <li>คำตัดสินของคณะกรรมการถือเป็นที่สิ้นสุด</li>
+      </ul>
+
+      <p style="color: #ef4444; font-size: 0.9rem; margin-top: 20px;">
+        <strong>⚠️ หมายเหตุ:</strong> กติกาอาจมีการปรับเปลี่ยนตามความเหมาะสมเพื่อให้การแข่งขันเป็นไปอย่างยุติธรรมสูงสุด
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="header">
+        <h1>📝 ฟอร์มลงทะเบียนเข้าร่วมแข่งขัน</h1>
+        <p>กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง</p>
+      </div>
+
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="team_name">ชื่อทีม (Team Name)</label>
+          <input type="text" id="team_name" name="team_name" placeholder="ตั้งชื่อทีมสุดเท่ของคุณ" required>
+        </div>
+
+        <div class="player-section">
+          <h4>👑 หัวหน้าทีม (กัปตัน)</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text" placeholder="ด.ช. / ด.ญ. / นาย / นางสาว" required>
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น / ห้อง</label>
+              <select required>
+                <option value="">เลือกระดับชั้น</option>
+                <option value="m1">ม.1</option>
+                <option value="m2">ม.2</option>
+                <option value="m3">ม.3</option>
+                <option value="m4">ม.4</option>
+                <option value="m5">ม.5</option>
+                <option value="m6">ม.6</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text" placeholder="ระบุให้ตรงกับในเกม" required>
+            </div>
+            <div class="form-group">
+              <label>เบอร์โทรศัพท์ (สำหรับติดต่อ)</label>
+              <input type="tel" placeholder="08X-XXX-XXXX" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-section">
+          <h4>⚔️ สมาชิกคนที่ 2</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น</label>
+              <input type="text" placeholder="เช่น ม.3/1" required>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-section">
+          <h4>⚔️ สมาชิกคนที่ 3</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น</label>
+              <input type="text" placeholder="เช่น ม.3/1" required>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-section">
+          <h4>⚔️ สมาชิกคนที่ 4</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น</label>
+              <input type="text" placeholder="เช่น ม.3/1" required>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-section">
+          <h4>⚔️ สมาชิกคนที่ 5</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น</label>
+              <input type="text" placeholder="เช่น ม.3/1" required>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-section" style="background-color: #fffbeb; border-color: #fde68a;">
+          <h4>🛡️ ตัวสำรอง (ถ้ามี)</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>ชื่อ-นามสกุลจริง</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>ระดับชั้น</label>
+              <input type="text" placeholder="เช่น ม.3/1">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>ชื่อในเกม (IGN)</label>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">ยืนยันการสมัครแข่งขัน</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
